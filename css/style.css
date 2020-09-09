@@ -1,0 +1,52 @@
+@-webkit-keyframes spinner {
+  100% {
+    -webkit-transform: rotate(3500deg);
+    transform: rotate(3500deg);
+  }
+}
+
+@keyframes spinner {
+  100% {
+    -webkit-transform: rotate(3500deg);
+    transform: rotate(3500deg);
+  }
+}
+
+.container {
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  top: 50vh;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.spinner {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background: url(../img/1.png) center center;
+  background-size: contain;
+  -webkit-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-animation: spinner 3s infinite alternate ease-in-out;
+  animation: spinner 3s infinite alternate ease-in-out;
+}
+
+.center-spinner {
+  display: inline-block;
+  position: absolute;
+  margin-left: -100px;
+  width: 100px;
+  height: 100px;
+  background: url(../img/2.png) center center;
+  background-size: contain;
+  content: "";
+}
+
+.text {
+  font-family: Arial;
+  position: relative;
+  z-index: 1;
+  font-size: 30px;
+}
